@@ -88,7 +88,7 @@ function SubmitExpense({ onAdd }) {
         <h2 className="text-2xl font-bold text-center text-indigo-700 mb-4 ">Submit Expense</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {["description", "amount", "category", "date"].map((field) => (
+          {["description", "amount", "date"].map((field) => (
             <div key={field}>
               <label className="block text-xs font-medium text-gray-700 mb-1 capitalize">
                 {field}
@@ -100,8 +100,8 @@ function SubmitExpense({ onAdd }) {
                 onChange={handleChange}
                 placeholder={
                   field === "description" ? "E.g. Office Supplies" :
-                  field === "amount" ? "E.g. 99.99" :
-                  field === "category" ? "E.g. Travel, Meals" : ""
+                  field === "amount" ? "E.g. 99.99" :""
+                  // field === "category" ? "E.g. Travel, Meals" : ""
                 }
                 className="w-full px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-indigo-400 focus:outline-none"
                 required={field !== "category"}
