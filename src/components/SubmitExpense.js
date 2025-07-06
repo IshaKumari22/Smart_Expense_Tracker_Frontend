@@ -71,7 +71,18 @@ function SubmitExpense({ onAdd }) {
     return cookieValue;
   }
 
-  return (
+  return (<>
+           {message && (
+          <div
+            className={`mt-4 text-center text-sm font-medium px-3 py-2 rounded-md ${
+              error
+                ? "text-red-600 bg-red-50 border border-red-200"
+                : "text-green-700 bg-green-50 border border-green-200"
+            }`}
+          >
+            {message}
+          </div>
+        )}
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 ">
       <div className="w-full max-w-sm p-4 bg-white rounded-xl shadow-lg ">
         <h2 className="text-2xl font-bold text-center text-indigo-700 mb-4 ">Submit Expense</h2>
@@ -108,19 +119,13 @@ function SubmitExpense({ onAdd }) {
           </div>
         </form>
 
-        {message && (
-          <div
-            className={`mt-4 text-center text-sm font-medium px-3 py-2 rounded-md ${
-              error
-                ? "text-red-600 bg-red-50 border border-red-200"
-                : "text-green-700 bg-green-50 border border-green-200"
-            }`}
-          >
-            {message}
-          </div>
-        )}
+ 
       </div>
+       <h2 className="text-3xl font-bold mb-6 text-center text-indigo-700">
+        Your Expenses
+      </h2>
     </div>
+    </>
   );
 }
 
