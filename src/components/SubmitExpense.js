@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { ChevronDown } from "lucide-react";
 function SubmitExpense({ onAdd }) {
 
   const [formData, setFormData] = useState({
@@ -109,7 +109,7 @@ function SubmitExpense({ onAdd }) {
             </div>
           ))}
 
-          <div className="pt-4">
+          <div className="">
             <button
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-1.5 px-3 rounded-md text-sm font-semibold transition duration-200"
@@ -118,13 +118,16 @@ function SubmitExpense({ onAdd }) {
             </button>
           </div>
         </form>
-
  
+<h2 className=" font-bold pt-8 text-center text-indigo-700">
+  Scroll down to see Expenses
+  <div className="mt-2 flex justify-center animate-bounce">
+    <ChevronDown className="h-6 w-6 text-indigo-500" />
+  </div>
+</h2>
       </div>
-       <h2 className="text-3xl font-bold mb-6 text-center text-indigo-700">
-        Your Expenses
-      </h2>
     </div>
+
     </>
   );
 }

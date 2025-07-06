@@ -13,9 +13,9 @@ const GetExpenses = ({ expenses, onDelete }) => {
 
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-5 pt-2">
-      {/* <h2 className="text-3xl font-bold mb-6 text-center text-indigo-700">
+      <h2 className="text-3xl font-bold mb-6 text-center text-indigo-700">
         Your Expenses
-      </h2> */}
+      </h2>
 
       {expenses.length === 0 ? (
         <p className="text-center text-gray-500">No expenses found.</p>
