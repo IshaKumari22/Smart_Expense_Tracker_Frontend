@@ -107,6 +107,7 @@ function SubmitExpense({ onAdd }) {
                 required={field !== "category"}
               />
             </div>
+            // 
           ))}
 
           <div className="">
