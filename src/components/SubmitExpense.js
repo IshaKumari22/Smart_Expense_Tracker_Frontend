@@ -72,9 +72,9 @@ function SubmitExpense({ onAdd }) {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="w-full max-w-sm p-4 bg-white rounded-xl shadow-lg">
-        <h2 className="text-2xl font-bold text-center text-indigo-700 mb-4">Submit Expense</h2>
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 ">
+      <div className="w-full max-w-sm p-4 bg-white rounded-xl shadow-lg ">
+        <h2 className="text-2xl font-bold text-center text-indigo-700 mb-4 ">Submit Expense</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {["description", "amount", "category", "date"].map((field) => (
