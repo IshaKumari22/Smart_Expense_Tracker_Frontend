@@ -16,9 +16,12 @@ function App() {
     }
   };
 
+
+
   // ✅ Run when App mounts
   useEffect(() => {
     fetchExpenses();
+
   }, []);
 
   // ✅ Called by SubmitExpense after POST

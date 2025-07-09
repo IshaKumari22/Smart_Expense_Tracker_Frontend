@@ -54,6 +54,24 @@ function SubmitExpense({ onAdd }) {
       setError(true);
       console.error(error);
     }
+const highSpendAlert=async()=>{
+  try{
+    const responses=await axios.get("http://127.0.0.1:8000/get-expenses/");
+    var sepSpend=(responses.data.expenses.map(expense=>expense.amount));
+    var totalSpent=0;
+    console.log(typeof(sepSpend));
+    for (let i=0;i<sepSpend.length;i++){
+         totalSpent +=sepSpend[i];
+    }
+    if(totalSpent >2000){
+      alert("You have ")
+    }
+    console.log(totalSpent);
+  }catch (error) {
+      console.error("Failed to fetch expenses:", error);
+    }
+}
+highSpendAlert()
   };
 
   function getCookie(name) {
@@ -70,6 +88,7 @@ function SubmitExpense({ onAdd }) {
     }
     return cookieValue;
   }
+
 
   return (<>
            {message && (
